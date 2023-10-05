@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ScientificCalculator">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Scientific Calculator"
+        app:titleTextAppearance="@style/ToolbarTitleStyle"
+        android:background="#EADDFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sinputTextview"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="0"
+            android:gravity="end"
+            android:textSize="40dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/soutputTextview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="bottom|end"
+            android:textSize="40dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:text="AC"
+                        android:textSize="25dp"
+                        android:layout_margin="9dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:text="C"
+                        android:textSize="30dp"
+                        android:layout_margin="9dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:text="("
+                        android:textSize="30dp"
+                        android:layout_margin="9dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton4"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:text=")"
+                        android:textSize="30dp"
+                        android:layout_margin="9dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </LinearLayout>
+
+                <!--row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton5"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="sin"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton6"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="cos"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton7"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="tan"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton8"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="log"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </LinearLayout>
+
+                <!--row 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton9"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="ln"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton10"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="x!"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton11"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="x²"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton12"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="x³"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </LinearLayout>
+
+                <!--row 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton13"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="√"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton14"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="1/x"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton15"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="π"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton16"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="^"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </LinearLayout>
+
+                <!--row 5 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton17"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="nCr"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton18"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="nPr"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton19"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="%"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton20"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="/"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </LinearLayout>
+
+                <!--row 6 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton21"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="7"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton22"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="8"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton23"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="9"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton24"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="*"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </LinearLayout>
+
+                <!--row 7 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton25"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="4"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton26"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="5"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton27"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="6"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton28"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="-"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </LinearLayout>
+
+                <!--row 8 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton29"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="1"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton30"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="2"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton31"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="3"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton32"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="+"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </LinearLayout>
+
+                <!--row 9 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton33"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="0"
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton34"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="."
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sbutton35"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="9dp"
+                        android:text="="
+                        android:textSize="25dp"
+                        app:cornerRadius="35dp"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

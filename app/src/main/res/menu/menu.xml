@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/scientificcalculator"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Scientific Calculator"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/closeapp"
+        android:title="Close Application"
+        tools:ignore="HardcodedText" />
+
+</menu>
